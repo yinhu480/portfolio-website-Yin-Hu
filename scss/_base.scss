@@ -1,0 +1,39 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+/* Base */
+body {
+    color: var(--text-primary);
+    font-family: Inter, system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    margin: 0;
+    background-color: var(--bg);
+}
+ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}

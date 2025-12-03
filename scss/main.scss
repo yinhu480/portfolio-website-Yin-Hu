@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import './utils/variables';
+@import './utils/utils';
+@import './base';
+
+@import './layouts/container';
+
+@import './components/header-logo';
+.visually-hidden {
+    position: absolute;
+    left: -1000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+@import './layouts/section';
+
+/* Button */
+@import './components/button';
+
+/* Link */
+@import './components/links';
+
+/* header */
+@import './layouts/header';
+@import './layouts/mobile-menu';
+
+/* hero-section */
+@import './layouts/hero-section';
+
+/* about-section */
+@import './layouts/about-section';
+
+
+/* skills-list */
+@import './layouts/skills-section';
+@import './components/skills-card';
+// projects-card
+@import './layouts/projects-section';
+@import './components/projects-card';
+
+/* contacts-section */
+@import './layouts/contacts-section';
+
+@import './layouts/contacts-form';
+
+
+@import './components/input';
+
+
+@import './layouts/footer';
+
+
+

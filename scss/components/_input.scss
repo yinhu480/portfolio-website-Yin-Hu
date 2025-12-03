@@ -1,0 +1,30 @@
+.input {
+    padding: 18px 10px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.17;
+    border: 1px solid var(--text-secondary);
+    /* border-radius: 32px; */
+    border-radius: .75rem;
+    background-color: var(--card);
+    color: var(--text-secondary);
+
+}
+
+.input:focus {
+    color: var(--primary-light);
+    border-color: var(--neon-blue);
+    outline: none;
+    background-color: var(--bg);
+}
+
+.input::placeholder {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.17;
+
+}
+
+.input:focus::placeholder {
+    color: var(--color-primary-darc);
+}

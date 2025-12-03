@@ -1,0 +1,226 @@
+.hero-section {
+    position: relative;
+    @media screen and (min-width: $bp-tablet) {
+        padding-top: 138px;
+    }
+        // max-height: 95vh;
+    &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            background:
+                radial-gradient(8px 8px at 60% 30%, rgba(12, 169, 106, 0.9) 50%, transparent 51%),
+                radial-gradient(6px 6px at 10% 20%, rgba(255, 255, 255, .95) 50%, transparent 51%),
+                radial-gradient(6px 6px at 33% 75%, rgba(255, 204, 0, .9) 50%, transparent 51%),
+                radial-gradient(8px 8px at 70% 30%, rgba(102, 178, 255, .9) 50%, transparent 51%),
+                radial-gradient(5px 5px at 85% 80%, rgba(255, 100, 100, .92) 50%, transparent 51%),
+    
+                /* Medium stars */
+                radial-gradient(4px 4px at 18% 40%, rgba(255, 255, 255, .7) 50%, transparent 51%),
+                radial-gradient(4px 4px at 75% 15%, rgba(255, 240, 150, .75) 50%, transparent 51%),
+                radial-gradient(4px 4px at 40% 80%, rgba(155, 200, 255, .72) 50%, transparent 51%),
+    
+                /* Small scattered stars */
+                radial-gradient(3px 3px at 25% 50%, rgba(255, 255, 255, .95) 50%, transparent 51%),
+                radial-gradient(3px 3px at 25% 50%, rgba(255, 255, 255, .95) 50%, transparent 51%),
+                radial-gradient(3px 3px at 25% 50%, rgba(255, 255, 255, .95) 50%, transparent 51%),
+                radial-gradient(3px 3px at 25% 50%, rgba(255, 255, 255, .95) 50%, transparent 51%),
+                radial-gradient(3px 3px at 90% 33%, rgba(255, 255, 255, .95)50%, transparent 51%),
+                radial-gradient(3px 3px at 60% 90%, rgba(255, 255, 255, .95) 50%, transparent 51%),
+                radial-gradient(3px 3px at 5% 70%, rgba(102, 178, 255, .5) 50%, transparent 51%),
+                radial-gradient(3px 3px at 80% 55%, rgba(255, 100, 100, .45) 50%, transparent 51%);
+            opacity: .9;
+            animation: starsMovement 30s linear infinite, starsFlicker 6s ease-in-out infinite;
+        }
+
+
+
+
+
+    &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    @media screen and (min-width: $bp-tablet) {
+
+            flex-direction: row;
+            
+            }
+        }
+        &__content{
+            text-align: center;
+            @media screen and (min-width: $bp-tablet) {
+                 text-align: left;
+            }
+        }
+    
+        &__title {
+            font-weight: 700;
+            font-size: 4.5rem;
+        }
+    
+        &__subtitle {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            color: var(--neon-cyan);
+        }
+    
+        &__text {
+            font-size: 20px;
+            line-height: 1.625;
+        }
+    
+        &__img-container {
+    
+            display: flex;
+            justify-content: center;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto 2rem;
+    
+        }
+    
+        &__img-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg,
+                    var(--neon-blue),
+                    var(--neon-cyan));
+            filter: blur(64px);
+            opacity: 0.7;
+            animation: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
+        }
+    
+        &__img {
+
+width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(58, 130, 247, 0.5);
+            @media screen and (min-width: $bp-tablet) {
+            width: 320px;
+            height: 320px;
+                        }
+        }
+}
+
+
+
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.85;
+    }
+}
+
+
+.hero-img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000),
+        var(--tw-shadow);
+    border-color: rgb(58 130 247 / var(--tw-border-opacity, 1));
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 1s ease infinite;
+}
+
+.scroll-icon {
+    width: 24px;
+    height: 24px;
+    stroke: var(--neon-blue);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -10px);
+    }
+}
+
+
+
+/* хаотичное движение в разных направлениях */
+@keyframes starsMovement {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-20px, 30px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(40px, -20px) rotate(-1deg);
+    }
+
+    75% {
+        transform: translate(-10px, 10px) rotate(1.5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* мерцание */
+@keyframes starsFlicker {
+
+    0%,
+    100% {
+        opacity: .85;
+    }
+
+    50% {
+        opacity: .55;
+    }
+}

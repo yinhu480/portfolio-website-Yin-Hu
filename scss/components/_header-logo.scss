@@ -1,0 +1,14 @@
+.header-logo{
+    &__logo {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+        color: var(--primary-light);
+    }
+    
+    &__subtext {
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+}

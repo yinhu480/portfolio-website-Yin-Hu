@@ -1,0 +1,83 @@
+.contacts-section {
+
+&__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+      
+        flex-direction: column;
+        @media screen and (min-width: $bp-tablet) {
+                flex-direction: row;
+            }
+    }
+
+    &__context {
+        flex: 0 1 calc(50% - 30px);
+        padding: 20px;
+        
+    }
+
+    &__context {
+        justify-content: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    &__list {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 62px;
+        height: 62px;
+        background-color: var(--card);
+        border-radius: 50%;
+        border: 1px solid var(--text-secondary);
+        cursor: pointer;
+
+        &:hover {
+            background-color: transparent;
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 0 20px var(--neon-blue);
+            transform: scale(1.05);
+        }
+    }
+
+  
+
+    &__svg {
+        stroke: var(--text-secondary);
+        width: 32px;
+        height: 32px;
+    }
+
+    &__img:hover .contacts-section__svg {
+        stroke: var(--primary-light);
+    }
+
+    &__subtext {
+        color: var(--text-primary);
+        font-size: 1.25rem;
+    }
+
+    &__highlight {
+        color: var(--neon-cyan);
+        font-size: 1.25rem;
+    }
+
+}
+
